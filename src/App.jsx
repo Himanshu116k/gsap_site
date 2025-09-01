@@ -2,21 +2,21 @@ import React, { useRef } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Agence from './pages/Agence'
-import Project from './pages/Project'
+import Project from './pages/Project.jsx'
 import Navbar from './components/Navigation/Navbar'
+import FullScreanNav from './components/Navigation/FullScreanNav'
 
 
 const App = () => {
 
   return (
-    <div className='text-white text-5xl' >
-      
-    
-      <Navbar/>
+    <div className='overflow-x-hidden'>
+      <Navbar />
+      <FullScreanNav />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/agence' element={<Agence/>}/>
-        <Route path='/project' element={<Project/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/agence' element={<Agence />} />
+        <Route path='/projects' element={<Project />} />
       </Routes>
     </div>
   )
